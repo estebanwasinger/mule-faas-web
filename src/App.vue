@@ -5,28 +5,8 @@ import AppInfoView from './views/AppInfoView.vue'
 </script>
 
 <template>
-  <!-- <header>
-    <img alt="Vue logo" class="logo" src="@/assets/logo.svg" width="125" height="125" />
-
-    <div class="wrapper">
-      <HelloWorld msg="You did it!" />
-
-      <nav>
-        <RouterLink to="/">Home</RouterLink>
-        <RouterLink to="/about">About</RouterLink>
-      </nav>
-    </div>
-  </header> -->
-
-  <!-- <RouterView /> -->
-  <h1>Apps</h1>
-
-  <div class="container">
-
-    <AppInfoView name="App Name" status=false />
-    <AppInfoView name="App Name" status=false />
-
-  </div>
+  <h1><a href="/">Mule FaaS</a></h1>
+  <RouterView />
 
 </template>
 
@@ -45,4 +25,6 @@ import AppInfoView from './views/AppInfoView.vue'
   justify-content: center;
   margin: 0 auto;
 }
+
+h1 a {color:black;}
 </style>

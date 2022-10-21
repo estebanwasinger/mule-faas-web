@@ -1,22 +1,35 @@
 <script setup lang="ts">
+import type FaasClient from '@/client/FaaSClient';
+
 
 const props = defineProps<{
     name: string,
-    status: string
+    status: Boolean
     url?: string
+    client : FaasClient
 }>()
+
+function start() {
+    props.client.start(props.name)
+}
+
+function stop() {
+    props.client.stop(props.name)
+}
 
 </script>
 
 <template>
-
     <div class="app-info">
+
         <div class="left-c">
             <h2>{{name}}</h2>
-            <p>Status: running</p>
+            <p v-if="status">Status: running</p>
+            <p v-else>Status : stopped</p>
         </div>
         <div class="right-c">
-            <button class="child-right">Start</button>
+            <b-button v-if="!status" variant="success" class="child-right" @click="start">Start</b-button>
+            <b-button v-else variant="danger" class="child-right" @click="stop">Stop</b-button>
         </div>
     </div>
 </template>
@@ -31,16 +44,16 @@ const props = defineProps<{
 
 .left-c {
     background-color: lightblue;
-    min-width: 300px;
+    min-width: 400px;
     float: left;
 }
 
-.right-c {
+.right-cd {
     outline: dashed 1px black;
     background-color: red;
     flex-grow: 100;
     align-items: center;
-  justify-content: center;
+    justify-content: center;
 }
 
 .child-right {
@@ -69,7 +82,7 @@ h3 {
     text-align: center;
 }
 
-@media (max-width: 500px) {
+@media (max-width: 600px) {
     .app-info {
         width: 100%;
     }
