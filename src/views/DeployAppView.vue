@@ -71,7 +71,7 @@ const onReset = (event) => {
                 label-for="input-2"
                     description="This name will be used for the URL">
                     <b-form-textarea @paste="onClean" id="textarea" v-model="form.appCode" placeholder="<mule>...." rows="3"
-                        max-rows="6"></b-form-textarea>
+                        max-rows="6" required></b-form-textarea>
                 </b-form-group>
 
                 <b-button type="submit" variant="primary">Deploy</b-button>
