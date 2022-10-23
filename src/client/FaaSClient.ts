@@ -20,6 +20,7 @@ export class FaasClient {
 
 
     listApps() {
+        console.log(import.meta.env)
         return axios.get(`${BASE_URL}/api/apps`)
     }
 
