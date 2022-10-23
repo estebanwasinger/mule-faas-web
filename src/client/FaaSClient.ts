@@ -11,7 +11,7 @@ export class FaasClient {
         if (params.length === 1) {
             BASE_URL = params[0];
         } else {
-             if(process.env.API_URL != null) {
+             if(import.meta.env.API_URL != null) {
                 BASE_URL = import.meta.env.API_URL;
             };
         }
