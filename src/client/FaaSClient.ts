@@ -1,7 +1,7 @@
 import axios from "axios";
 import type {AxiosResponse} from "axios"
 
-let BASE_URL : String = 'http://0.0.0.0:8080'
+let BASE_URL : String = 'mule-faas-production.up.railway.app'
 
 export class FaasClient {
 
@@ -21,6 +21,7 @@ export class FaasClient {
 
     listApps() {
         console.log(import.meta.env)
+        console.log(import.meta)
         return axios.get(`${BASE_URL}/api/apps`)
     }
 
