@@ -1,14 +1,9 @@
 import axios from "axios";
 import type {AxiosResponse} from "axios"
 
-export interface AppDescription {
-    name: String,
-    app : String
-}
-
 let BASE_URL : String = 'http://0.0.0.0:8080'
 
-class FaasClient {
+export class FaasClient {
 
     constructor();
     constructor(baseUrl : String);

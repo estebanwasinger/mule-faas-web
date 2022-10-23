@@ -2,8 +2,9 @@
 import {onMounted, ref} from 'vue'
 import FaasClient from '@/client/FaaSClient';
 import AppInfoView from './AppInfoView.vue'
+import type { AppDescription } from '@/client/AppDescription';
 
-const items = ref([])
+const items = ref<AppDescription[]>([])
 
 const client = new FaasClient();
 

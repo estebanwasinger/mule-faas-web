@@ -18,13 +18,13 @@ const form = reactive({
 const foods = [{ text: 'Select One', value: null }, 'Carrots', 'Beans', 'Tomatoes', 'Corn']
 const show = ref(true)
 
-const onSubmit = (event) => {
+const onSubmit = (event: any) => {
     event.preventDefault()
     client.addApp(form.name, form.urlName, form.appCode)
     window.location.href = "./"
 }
 
-const onClean = (event) => {
+const onClean = (event: any) => {
     if(form.appCode == '') {
         event.preventDefault()
     let appValue = event.clipboardData.getData('text')
@@ -35,7 +35,7 @@ const onClean = (event) => {
 
 }
 
-const onReset = (event) => {
+const onReset = (event: any) => {
     event.preventDefault()
     // Reset our form values
     form.urlName = ''

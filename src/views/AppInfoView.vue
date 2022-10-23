@@ -3,9 +3,9 @@ import type FaasClient from '@/client/FaaSClient';
 
 
 const props = defineProps<{
-    name: string,
+    name: String,
     status: Boolean
-    url?: string
+    url?: String
     client : FaasClient
 }>()
 
