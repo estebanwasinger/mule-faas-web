@@ -16,7 +16,9 @@ class FaasClient {
         if (params.length === 1) {
             BASE_URL = params[0];
         } else {
-            BASE_URL = 'https://mule-faas-production.up.railway.app'
+             if(process.env.API_URL != null) {
+                BASE_URL = process.env.API_URL;
+            };
         }
     }
 
