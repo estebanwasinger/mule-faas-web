@@ -1,7 +1,7 @@
 import axios from "axios";
 import type {AxiosResponse} from "axios"
 
-let BASE_URL : String = 'mule-faas-production.up.railway.app'
+let BASE_URL : String = 'https://mule-faas-production.up.railway.app'
 
 export class FaasClient {
 
