@@ -12,7 +12,7 @@ export class FaasClient {
             BASE_URL = params[0];
         } else {
              if(process.env.API_URL != null) {
-                BASE_URL = process.env.API_URL;
+                BASE_URL = import.meta.env.API_URL;
             };
         }
     }
