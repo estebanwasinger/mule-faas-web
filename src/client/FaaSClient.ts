@@ -2,6 +2,7 @@ import axios from "axios";
 import type {AxiosResponse} from "axios"
 
 let BASE_URL : String = 'https://mule-faas-production.up.railway.app'
+// let BASE_URL : String = 'http://0.0.0.0:8080'
 
 export class FaasClient {
 
@@ -17,7 +18,9 @@ export class FaasClient {
         }
     }
 
-
+    getBaseUrl() {
+        return BASE_URL;
+    }
 
     listApps() {
         console.log(import.meta.env)
@@ -39,6 +42,10 @@ export class FaasClient {
 
     stop(appName : String)  {
         return axios.get(`${BASE_URL}/api/apps/${appName}/stop`)
+    }
+
+    remove(appName: String) {
+        return axios.delete(`${BASE_URL}/api/apps/${appName}`)
     }
 
 }

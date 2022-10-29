@@ -17,6 +17,14 @@ function stop() {
     props.client.stop(props.name)
 }
 
+function remove() {
+    props.client.remove(props.name)
+}
+
+function getBaseUrl() {
+    return `${props.client.getBaseUrl()}/${props.name}`
+}
+
 </script>
 
 <template>
@@ -24,12 +32,12 @@ function stop() {
 
         <div class="left-c">
             <h2>{{name}}</h2>
-            <p v-if="status">Status: running</p>
-            <p v-else>Status : stopped</p>
+            <p>Base URL: <a :href=getBaseUrl()>{{getBaseUrl()}}</a></p> 
         </div>
         <div class="right-c">
-            <b-button v-if="!status" variant="success" class="child-right" @click="start">Start</b-button>
-            <b-button v-else variant="danger" class="child-right" @click="stop">Stop</b-button>
+            <!-- <b-button v-if="!status" variant="success" class="child-right" @click="start">Start</b-button> -->
+            <!-- <b-button v-else variant="danger" class="child-right" @click="stop">Stop</b-button> -->
+            <b-button variant="danger" class="child-right" @click="remove">Remove</b-button>
         </div>
     </div>
 </template>
@@ -43,7 +51,7 @@ function stop() {
 }
 
 .left-c {
-    background-color: lightblue;
+    /* background-color: lightblue; */
     min-width: 400px;
     float: left;
 }

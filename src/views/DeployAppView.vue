@@ -60,11 +60,11 @@ const onReset = (event: any) => {
                         required></b-form-input>
                 </b-form-group>
 
-                <b-form-group id="input-group-1" label="Url Name" label-for="input-1"
+                <!-- <b-form-group id="input-group-1" label="Url Name" label-for="input-1"
                     description="This name will be used for the URL">
                     <b-form-input id="input-1" v-model="form.urlName" type="text" placeholder="Enter application name"
                         required></b-form-input>
-                </b-form-group>
+                </b-form-group> -->
 
                 <b-form-group id="input-group-1" 
                 label="Application Code" 

@@ -27,4 +27,8 @@ import AppInfoView from './views/AppInfoView.vue'
 }
 
 h1 a {color:black;}
+
+/* @media (prefers-color-scheme: dark) {
+  h1 a {color:grey;}
+} */
 </style>
