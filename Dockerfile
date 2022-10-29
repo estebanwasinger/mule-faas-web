@@ -16,6 +16,7 @@ RUN npm install
 COPY . .
 
 # build app for production with minification
+ENV PORT=8082
 
 EXPOSE 8080
 CMD [ "npm", "run" , "dev"]

@@ -2,9 +2,9 @@
   "name": "mule-faas-web",
   "version": "0.0.0",
   "scripts": {
-    "dev": "vite",
+    "dev": "vite --port $PORT",
     "build": "run-p type-check build-only",
-    "preview": "vite preview --port 4173",
+    "preview": "vite preview --port $PORT",
     "build-only": "vite build",
     "type-check": "vue-tsc --noEmit"
   },
